@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 
 class Data {
   constructor(students, courses) {
@@ -47,6 +47,23 @@ function getAllStudents() {
     }
   });
 }
+function addStudent(studentData) {
+  return new Promise((resolve, reject) => {
+    if (dataCollection && dataCollection.students) {
+      dataCollection.students = [
+        ...dataCollection.students,
+        {
+          ...studentData,
+          studentNum: dataCollection.students.length + 1,
+          TA: studentData.TA ? true : false,
+          course: Number(studentData.course),
+        },
+      ];
+      resolve();
+    }
+    reject();
+  });
+}
 
 function getTAs() {
   return new Promise((resolve, reject) => {
@@ -85,7 +102,9 @@ function getStudentsByCourse(course) {
       dataCollection.students &&
       dataCollection.students.length > 0
     ) {
-      resolve(dataCollection.students.filter(student => student.course === course));
+      resolve(
+        dataCollection.students.filter((student) => student.course === course)
+      );
     } else {
       reject("No students returned");
     }
@@ -98,7 +117,9 @@ function getStudentByNum(num) {
       dataCollection.students &&
       dataCollection.students.length > 0
     ) {
-      let student = dataCollection.students.find(student => student.studentNum === num);
+      let student = dataCollection.students.find(
+        (student) => student.studentNum === num
+      );
       if (student) {
         resolve(student);
       } else {
@@ -115,5 +136,6 @@ module.exports = {
   getTAs,
   getCourses,
   getStudentByNum,
-  getStudentsByCourse
+  addStudent,
+  getStudentsByCourse,
 };

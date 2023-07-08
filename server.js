@@ -12,6 +12,13 @@ const path = require('path');
 const collegeData = require("./modules/collegeData");
 var app = express();
 var HTTP_PORT = process.env.PORT || 8080;
+
+
+const publicPath = path.join(__dirname, 'public');
+app.use(express.static(publicPath));
+
+app.use(express.urlencoded({ extended: true }));
+
 // setup a 'route' to listen on the default url path
 app.get("/students", (req, res) => {
     const { course} = req.query;
@@ -57,6 +64,21 @@ app.get("/htmlDemo", (req, res) => {
     const filePath = path.join(__dirname, 'views', 'htmlDemo.html');
     res.sendFile(filePath)
 });
+app.get("/students/add", (req, res) => {
+    const filePath = path.join(__dirname, 'views', 'addStudent.html');
+    res.sendFile(filePath)
+});
+
+app.post("/students/add", (req, res) => {
+    console.log(req.body)
+    collegeData.addStudent(req.body).then(() => {
+        res.redirect('/students');
+    }).catch(err => {
+        res.status(500).send({message:"no results"});
+    })
+});
+
+
 app.get("/courses", (req, res) => {
     collegeData.getCourses().then(courses => {
         res.status(200).json(courses);
