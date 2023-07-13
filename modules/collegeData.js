@@ -47,6 +47,7 @@ function getAllStudents() {
     }
   });
 }
+
 function addStudent(studentData) {
   return new Promise((resolve, reject) => {
     if (dataCollection && dataCollection.students) {
@@ -82,6 +83,20 @@ function getTAs() {
   });
 }
 
+function getCourseById(id) {
+  return new Promise((resolve, reject) => {
+    if (
+      dataCollection &&
+      dataCollection.courses &&
+      dataCollection.courses.length > 0
+    ) {
+      resolve(dataCollection.courses.find(val => val.courseId == id));
+    } else {
+      reject("No courses returned");
+    }
+  });
+}
+
 function getCourses() {
   return new Promise((resolve, reject) => {
     if (
@@ -105,6 +120,34 @@ function getStudentsByCourse(course) {
       resolve(
         dataCollection.students.filter((student) => student.course === course)
       );
+    } else {
+      reject("No students returned");
+    }
+  });
+}
+
+function updateStudent(studentData) {
+  return new Promise((resolve, reject) => {
+    if (
+      dataCollection &&
+      dataCollection.students &&
+      dataCollection.students.length > 0
+    ) {
+      try {
+        let sIndex = dataCollection.students.findIndex(
+          (student) => student.studentNum === Number(studentData.studentNum)
+        );
+        let updatedStudent = {
+          ...studentData,
+          studentNum: Number(studentData.studentNum),
+          TA: studentData.TA ? true: false,
+          course:  Number(studentData.course)
+        };
+        dataCollection.students[sIndex] = updatedStudent;
+        resolve();
+      } catch(err) {
+        reject("student not found");
+      }
     } else {
       reject("No students returned");
     }
@@ -137,5 +180,7 @@ module.exports = {
   getCourses,
   getStudentByNum,
   addStudent,
+  getCourseById,
+  updateStudent,
   getStudentsByCourse,
 };

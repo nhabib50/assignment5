@@ -39,24 +39,10 @@
   }
   
   
-  table tr:nth-child(odd) td {
-    background-color: #f0f0f0; 
-  }
-  
-  
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Dosis', sans-serif; 
     color: #004d40; 
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
-  }
-  
-  
-  a {
-    color: #333; 
-  }
-  
-  a:hover {
-    color: #ff0000; 
   }
   
   
