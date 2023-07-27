@@ -1,29 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Indie+Flower&family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Bebas+Neue&display=swap');
 
-.navbar.bg-light {
-    background-color: #f8f9fa; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .navbar-light .navbar-brand {
-    font-family: 'Dosis', sans-serif; 
-    color: #9ccc65; 
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
-  }
-  
-  
-  .navbar-nav .nav-link {
-    font-family: 'Kanit', sans-serif; 
-    color: #333; 
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #0277bd !important; 
-  }
+
   
   
   body {
-    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    background: linear-gradient(to bottom, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); 
     min-height: 100vh;
   }
   
@@ -39,17 +20,50 @@
   }
   
   
+  table tr:nth-child(odd) td {
+    background-color: #f0f0f0; 
+  }
+  
+  
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Dosis', sans-serif; 
-    color: #004d40; 
+    font-family: 'Agdasima', sans-serif; 
+    color: darkcyan; 
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
+  }
+  
+  
+  a {
+    color: #1f6cca; 
+  }
+  
+  a:hover {
+    color: brown; 
   }
   
   
   legend {
     padding: 10px 0; 
-    font-family: 'Dosis', sans-serif; 
-    color: #3e2723; 
+    font-family: 'Agdasima', sans-serif; 
+    color: red; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
+  }
+  .navbar.bg-light {
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .navbar-light .navbar-brand {
+    font-family: 'Agdasima', sans-serif; 
+    color: #9ccc65; 
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
   }
   
+  
+  .navbar-nav .nav-link {
+    font-family: 'Bebas Neue', sans-serif; 
+    color: #ea4b4b; 
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #0277bd !important; 
+  }
