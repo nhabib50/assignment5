@@ -1,4 +1,7 @@
-{
+{ 
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "name": "web700-app",
   "version": "1.0.0",
   "description": "",
