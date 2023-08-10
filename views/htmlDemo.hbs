@@ -1,182 +1,193 @@
 <div class="row">
   <main class="col-md-12">
-    <section class="mt-4">
-      <h2 class="display-4">Tables</h2>
 
-      <h3>Table 1</h3>
-      <table class="table">
-        <caption>
-          Table 1
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Header 1</th>
-            <th scope="col">Header 2</th>
-            <th scope="col">Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
-          </tr>
-          <tr>
-            <td>Cell 4</td>
-            <td>Cell 5</td>
-            <td>Cell 6</td>
-          </tr>
-          <tr>
-            <td>Cell 7</td>
-            <td>Cell 8</td>
-            <td>Cell 9</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Footer</td>
-          </tr>
-        </tfoot>
-      </table>
+    <!--Table Section-->
 
-      <h3>Table 2</h3>
-      <table class="table">
-        <caption>
-          Table 2
-        </caption>
-        <thead>
-          <tr>
-            <th rowspan="2">Header 1</th>
-            <th colspan="2">Header 2</th>
-          </tr>
-          <tr>
-            <th>Subheader 1</th>
-            <th>Subheader 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
-          </tr>
-          <tr>
-            <td>Cell 4</td>
-            <td>Cell 5</td>
-            <td>Cell 6</td>
-          </tr>
-          <tr>
-            <td>Cell 7</td>
-            <td>Cell 8</td>
-            <td>Cell 9</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Footer</td>
-          </tr>
-        </tfoot>
-      </table>
+    <div style="text-align: center;">
+      <h1>Table Section</h1>
+    </div>
+    <table border="3" cellspacing="0" cellpadding="5" width="300">
+      <caption>Table 1: Fruit Prices</caption>
+      <thead>
+        <tr>
+          <th>Fruit</th>
+          <th>Price (CAD)</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apple</td>
+          <td>$0.75</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>$0.50</td>
+          <td rowspan="2">20</td>
+        </tr>
+        <tr>
+          <td>Banana</td>
+          <td>$0.40</td>
 
-      <p>
-        The "Tables" section showcases two HTML tables. The tables demonstrate
-        the usage of elements such as
-        <code>
-          &lt;caption&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;,
-          &lt;th&gt;, &lt;td&gt;, and &lt;tr&gt;
-        </code>. The tables have a minimum of 3 rows and 3 columns and utilize
-        properties like `rowspan` and `colspan`. Each cell in the tables
-        contains content, which can include images, links, or text.
-      </p>
-    </section>
-    <section class="mt-4 border-top pt-5">
-      <h2 class="display-4">Lists</h2>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total: $25.5</td>
 
-      <h3>List Example</h3>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>
-          Item 3
-          <ul>
-            <li>Nested Item 1</li>
-            <li>Nested Item 2</li>
-            <li>Nested Item 3</li>
-          </ul>
-        </li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-      </ul>
+        </tr>
+      </tfoot>
+    </table>
 
-      <p>
-        The "Lists" section demonstrates a single list with a minimum of 5
-        items. One of the items contains a nested list with a different type
-        than the parent list. The items in the list can include various content
-        such as images, links, text, etc.
-      </p>
-    </section>
-    <section class="mt-4 border-top pt-5">
-      <h2 class="display-4">Images</h2>
-      <div class="row mt-4 pb-4">
-        <div class="col-md-4 col-sm-12">
-          <img
-            class="img-fluid"
-            src="https://upload.wikimedia.org/wikipedia/commons/6/69/Snowboarder_in_halfpipe.jpg"
-            alt="snow"
-          />
-      </div>
-      <p>
-        In this section, we have included three images with corresponding alt
-        text. The alt text provides a textual description of each image,
-        allowing visually impaired users to understand the content. The images
-        themselves are not hosted on this server and can be found at the
-        provided URLs.
-      </p>
-    </section>
-    <section class="mt-4 border-top pt-5">
-      <h2 class="display-4">Audio Player</h2>
-      <div class="audio-player pb-4">
-        <audio controls>
-          <source
-            src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-audio.mp3"
-            type="audio/mpeg"
-          />
-          <source
-            src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-audio.ogg"
-            type="audio/ogg"
-          />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <p>
-        In this section, we have included an HTML5 audio player embedded. The
-        audio player provides controls for playing, pausing, adjusting the
-        volume, and seeking within the audio.
-      </p>
-    </section>
-    <section class="mt-4 border-top pt-5">
-      <h2 class="display-4">Video Player</h2>
-      <div class="video-player">
-        <video controls>
-          <source
-            src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-video.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-video.ogg"
-            type="video/ogg"
-          />
-          <source
-            src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-video.webm"
-            type="video/webm"
-          />
-          Your browser does not support the video element.
-        </video>
-      </div>
-      <p>
-        The video player provides controls for playing, pausing, adjusting the
-        volume, and seeking within the video.
-      </p>
-    </section>
+    <table border="3" cellspacing="0" cellpadding="5" width="500">
+      <caption>Table 2: Employee Information</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Ram Basnet</td>
+          <td>r.basnet@gmail.com</td>
+          <td>(555) 123-4567</td>
+        </tr>
+        <tr>
+          <td>John Snow</td>
+          <td>got@hbo.com</td>
+          <td>(555) 987-6543</td>
+        </tr>
+        <tr>
+          <td>Khal Hussain</td>
+          <td>hussain.k21@gmail.com</td>
+          <td>(555) 555-5555</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total Employees: 3</td>
+        </tr>
+      </tfoot>
+    </table>
+    <p>The "Tables" section contains two HTML tables. Table 1 displays the
+      prices and quantities of different fruits. It uses the
+      <code>thead</code>,
+      <code>tbody</code>, and
+      <code>tfoot</code>
+      elements to structure the table. The cells in this table contain text
+      representing fruit names, prices, and quantities. The table also has a
+      caption indicating its purpose. Table 2 presents employee information,
+      including names, contact emails, and phone numbers. It utilizes the
+      <code>rowspan</code>
+      and
+      <code>colspan</code>
+      properties to merge cells and create a more organized layout. This table
+      also includes a caption and a footer with a summary of the number of
+      employees.</p>
+
+    <!--List section-->
+
+    <div style="text-align: center;">
+      <h1>List Section</h1>
+    </div>
+    <ul>
+      <li>This is an example of text.</li>
+      <li>This is an example of a link:
+        <a href="https://web700.ca/">Click Here</a></li>
+      <li>Item 3</li>
+      <li>
+        Item 4 with sub-list:
+        <ol>
+          <li>Sub-item 1</li>
+          <li>Sub-item 2</li>
+          <li>Sub-item 3</li>
+        </ol>
+      </li>
+      <li>Item 5</li>
+    </ul>
+    <p>The "Lists" section contains a single unordered list. The list consists
+      of five items. Item 4 contains an ordered sub-list with three sub-items.
+      Each item in the list can contain various types of content, such as text
+      or other HTML elements like images or links. The purpose of this section
+      is to demonstrate the use of lists to organize and structure information
+      in a hierarchical manner.</p>
+
+    <!--Image Section-->
+
+    <div style="text-align: center;">
+      <h1>Image Section</h1>
+    </div>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/69/Snowboarder_in_halfpipe.jpg"
+      alt="Snowboarder in halfpipe"
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/2/29/Scenic_View_of_Mountains.jpg"
+      alt="Scenic view of mountains"
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/4/47/City_Skyline_at_Night.jpg"
+      alt="City skyline at night"
+    />
+    <p>The "Images" section showcases three images. Each image has been provided
+      with alternative text ("alt" text) to ensure accessibility. The first
+      image displays a snowboarder in a halfpipe. Images are a powerful visual
+      medium that can enhance the user experience and convey information in a
+      more engaging way.</p>
+
+    <!--Audio Section-->
+
+    <div style="text-align: center;">
+      <h1>Audio Section</h1>
+    </div>
+    <audio controls>
+      <source
+        src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-audio.mp3"
+        type="audio/mpeg"
+      />
+      <source
+        src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-audio.ogg"
+        type="audio/ogg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+    <p>The "Audio" section features an HTML5 audio player. The audio source
+      consists of a sample audio file. The audio player includes controls for
+      play/pause, volume adjustment, and track progress. By providing audio
+      content, websites can offer an immersive experience for users, allowing
+      them to listen to music, podcasts, or other audio recordings directly on
+      the page.</p>
+    <!--Video Section-->
+
+    <div style="text-align: center;">
+      <h1>Video Section</h1>
+    </div>
+    <video controls width="1000">
+      <source
+        src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-video.mp4"
+        type="video/mp4"
+      />
+      <source
+        src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-video.ogg"
+        type="video/ogg"
+      />
+      <source
+        src="https://pat-crawford-sdds.netlify.app/shared/fall-2022/web700/A3/sample-video.webm"
+        type="video/webm"
+      />
+      Your browser does not support the video element.
+    </video>
+    <p>The "Video" section showcases an HTML5 video player. The video source
+      consists of a sample video file available in different formats. The video
+      player provides controls for playback, volume adjustment, and video
+      progress. By including video content on a website, you can engage users
+      with visual storytelling, tutorials, product demonstrations, and more.
+      Videos are a versatile medium for conveying information and enhancing user
+      experience.</p>
+
   </main>
 </div>
