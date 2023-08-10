@@ -2,6 +2,10 @@ const {Sequelize} = require('sequelize');
 
 var sequelize = new Sequelize('postgres://sghnkjwa:kCIkGL8dQuTmjsaizDeTYA2rccoMDkyq@balarama.db.elephantsql.com/sghnkjwa');
 
+function parse(data) {
+    return JSON.parse(JSON.stringify(data));
+}
+
 var Student = sequelize.define('Student', {
     studentNum: {
         type: Sequelize.INTEGER,
@@ -50,7 +54,7 @@ const getAllStudents = () => {
     return new Promise((resolve, reject) => {
         Student.findAll()
             .then(students => {
-                resolve(students);
+                resolve(parse(students));
             })
             .catch(error => {
                 console.error('Error fetching students:', error);
@@ -68,7 +72,7 @@ const getStudentsByCourse = (course) => {
                 if(studentsByCourse.length === 0){
                     reject('No results returned');
                 } else {
-                    resolve(studentsByCourse);
+                    resolve(parse(studentsByCourse));
                 }
             })
             .catch(error => {
@@ -86,7 +90,7 @@ const getStudentByNum = (num) => {
                 if (studentByNum.length === 0) {
                     reject('No results returned');
                 } else {
-                    resolve(studentByNum[0]);
+                    resolve(parse(studentByNum[0]));
                 }
             })
             .catch(error => {
@@ -103,7 +107,7 @@ const getCourses = () => {
                 if (courses.length === 0) {
                     reject('No results returned');
                 } else {
-                    resolve(courses);
+                    resolve(parse(courses));
                 }
             })
             .catch(error => {
@@ -121,7 +125,7 @@ const getCourseById = (id) => {
                 if (courseById.length === 0) {
                     reject('No results returned');
                 } else {
-                    resolve(courseById[0]);
+                    resolve(parse(courseById[0]));
                 }
             })
             .catch(error => {
